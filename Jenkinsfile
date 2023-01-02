@@ -5,9 +5,9 @@ pipeline{
             agent{
                 docker {
                     image 'openjdk:11'
-                    args '-e SONAR_USER_HOME=/home/sponraj/.jenkins/workspace/java_grade_application@2/.sonar'
+                    args '-e SONAR_USER_HOME=${WORKSPACE}/.sonar'
                 }
-
+            }
             steps{
                 script{
                     withSonarQubeEnv(credentialsId: 'sonar-token') {
