@@ -14,7 +14,7 @@ pipeline{
                         sh 'chmod +x gradlew'
                         sh 'export SONAR_USER_HOME=$WORKSPACE/.sonar'
                         sh 'env'
-                        sh './gradlew sonarqube --debug'
+                        sh './gradlew sonarqube --stacktrace'
                     }
                 }
             }
