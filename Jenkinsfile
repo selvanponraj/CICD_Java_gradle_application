@@ -5,16 +5,13 @@ pipeline{
             agent{
                 docker {
                     image 'openjdk:11'
-
                 }
             }
             steps{
                 script{
                     withSonarQubeEnv(credentialsId: 'sonar-token') {
                         sh 'chmod +x gradlew'
-                        // sh 'export SONAR_USER_HOME=$WORKSPACE/.sonar'
-                        sh 'env'
-                        sh './gradlew sonarqube --stacktrace'
+                        sh './gradlew sonarqube --debug'
                     }
                 }
             }
