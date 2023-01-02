@@ -25,10 +25,9 @@ test {
 	useJUnitPlatform()
 }
 
-
 sonarqube {
     properties {
         property 'sonar.host.url', 'http://34.78.122.117:9000'
-        property 'sonar.login', 'f7d0893af8bab51cd1aa2f0dcbec82cfa96fdf93'
+        property 'sonar.login', '******'
     }
 }
